@@ -1,7 +1,21 @@
-# Tauri + Vanilla
+# Crabacus
 
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Javascript.
+A code statistics visualiser for your projects.
 
-## Recommended IDE Setup
+## Notes
+Types of data I might want to get:
+- Files modified
+- Files added
+- Files deleted
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+- Lines modified
+- Lines added
+- Lines deleted
+
+- Number of commits
+- Number of PR's
+
+Other ideas:
+- Generate a report based on a time range
+- Goes through all of your commits
+- Graphs and data visulisation

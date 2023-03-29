@@ -1,10 +1,17 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
+use std::process::Command;
+
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
 fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
+    let output = Command::new("cmd")
+        .args(["/C", "echo hello"])
+        .output()
+        .expect("failed to execute process");
+    return String::from_utf8_lossy(&output.stdout).to_string();
+    // format!("Hello, {}! You've been greeted from Rust!", name)
 }
 
 fn main() {
